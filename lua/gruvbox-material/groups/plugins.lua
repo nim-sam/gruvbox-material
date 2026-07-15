@@ -100,82 +100,83 @@ function M.get(c, config)
 		groups.NvimTreeWinSeparator = { fg = c.border, bg = c.bg_sidebar }
 	end
 
-	--if enabled("bufferline") then
 	groups.BufferLineOffsetSeparator = { bg = c.bg, fg = c.border }
-	groups.BufferLineTab = { fg = c.comment, bg = c.bg_tab_inactive }
-	groups.BufferLineTabSelected = { fg = c.fg, bg = c.bg_tab_active }
-	groups.BufferLineTabClose = { fg = c.error }
-	groups.BufferLineBuffer = { fg = c.fg, bg = c.bg_tab_inactive }
-	groups.BufferLineBufferSelected = { fg = c.fg, bg = c.bg_tab_active }
-	groups.BufferLineBufferVisible = { fg = c.fg_muted, bg = c.bg_tab_inactive }
-	groups.BufferLineCloseButton = { fg = c.comment }
-	groups.BufferLineCloseButtonSelected = { fg = c.error }
-	groups.BufferLineCloseButtonVisible = { fg = c.comment }
-	groups.BufferLineModified = { fg = c.modified }
-	groups.BufferLineModifiedSelected = { fg = c.modified }
-	groups.BufferLineModifiedVisible = { fg = c.modified }
-	groups.BufferLineSeparator = { fg = c.border, bg = c.bg_tab_inactive }
-	groups.BufferLineSeparatorSelected = { fg = c.border, bg = c.bg_tab_active }
-	groups.BufferLineSeparatorVisible = { fg = c.border, bg = c.bg_tab_inactive }
-	groups.BufferLineIndicatorSelected = { fg = c.fg_accent }
-	groups.BufferLinePick = { fg = c.warning, bold = true }
-	groups.BufferLinePickSelected = { fg = c.warning, bold = true }
-	groups.BufferLineNumbers = { fg = c.comment }
-	groups.BufferLineNumbersSelected = { fg = c.fg }
-	groups.BufferLineNumbersVisible = { fg = c.comment }
-	groups.BufferLineDuplicate = { fg = c.comment }
-	groups.BufferLineDuplicateSelected = { fg = c.comment }
-	groups.BufferLineDuplicateVisible = { fg = c.comment }
-	groups.BufferLineError = { fg = c.error }
-	groups.BufferLineErrorSelected = { fg = c.error }
-	groups.BufferLineWarning = { fg = c.warning }
-	groups.BufferLineWarningSelected = { fg = c.warning }
-	groups.BufferLineInfo = { fg = c.info }
-	groups.BufferLineInfoSelected = { fg = c.info }
-	groups.BufferLineHint = { fg = c.hint }
-	groups.BufferLineHintSelected = { fg = c.hint }
-	groups.BufferLineDiagnostics = { fg = c.comment }
-	groups.BufferLineDiagnosticsSelected = { fg = c.fg_muted }
-	groups.BufferLineGroup = { fg = c.blue }
-	groups.BufferLineGroupSelected = { fg = c.blue, bold = true }
-	groups.OffsetNonText = { fg = c.border }
-end
 
-if enabled("indent_blankline") then
-	groups.IblIndent = { fg = c.border }
-	groups.IblScope = { fg = c.comment }
-	groups.IblWhitespace = { fg = c.border }
-end
+	if enabled("bufferline") then
+		groups.BufferLineTab = { fg = c.comment, bg = c.bg_tab_inactive }
+		groups.BufferLineTabSelected = { fg = c.fg, bg = c.bg_tab_active }
+		groups.BufferLineTabClose = { fg = c.error }
+		groups.BufferLineBuffer = { fg = c.fg, bg = c.bg_tab_inactive }
+		groups.BufferLineBufferSelected = { fg = c.fg, bg = c.bg_tab_active }
+		groups.BufferLineBufferVisible = { fg = c.fg_muted, bg = c.bg_tab_inactive }
+		groups.BufferLineCloseButton = { fg = c.comment }
+		groups.BufferLineCloseButtonSelected = { fg = c.error }
+		groups.BufferLineCloseButtonVisible = { fg = c.comment }
+		groups.BufferLineModified = { fg = c.modified }
+		groups.BufferLineModifiedSelected = { fg = c.modified }
+		groups.BufferLineModifiedVisible = { fg = c.modified }
+		groups.BufferLineSeparator = { fg = c.border, bg = c.bg_tab_inactive }
+		groups.BufferLineSeparatorSelected = { fg = c.border, bg = c.bg_tab_active }
+		groups.BufferLineSeparatorVisible = { fg = c.border, bg = c.bg_tab_inactive }
+		groups.BufferLineIndicatorSelected = { fg = c.fg_accent }
+		groups.BufferLinePick = { fg = c.warning, bold = true }
+		groups.BufferLinePickSelected = { fg = c.warning, bold = true }
+		groups.BufferLineNumbers = { fg = c.comment }
+		groups.BufferLineNumbersSelected = { fg = c.fg }
+		groups.BufferLineNumbersVisible = { fg = c.comment }
+		groups.BufferLineDuplicate = { fg = c.comment }
+		groups.BufferLineDuplicateSelected = { fg = c.comment }
+		groups.BufferLineDuplicateVisible = { fg = c.comment }
+		groups.BufferLineError = { fg = c.error }
+		groups.BufferLineErrorSelected = { fg = c.error }
+		groups.BufferLineWarning = { fg = c.warning }
+		groups.BufferLineWarningSelected = { fg = c.warning }
+		groups.BufferLineInfo = { fg = c.info }
+		groups.BufferLineInfoSelected = { fg = c.info }
+		groups.BufferLineHint = { fg = c.hint }
+		groups.BufferLineHintSelected = { fg = c.hint }
+		groups.BufferLineDiagnostics = { fg = c.comment }
+		groups.BufferLineDiagnosticsSelected = { fg = c.fg_muted }
+		groups.BufferLineGroup = { fg = c.blue }
+		groups.BufferLineGroupSelected = { fg = c.blue, bold = true }
+		groups.OffsetNonText = { fg = c.border }
+	end
 
-if enabled("noice") then
-	groups.NoiceCmdline = { bg = c.bg_float }
-	groups.NoiceCmdlineIcon = { fg = c.fg_accent }
-	groups.NoiceCmdlineIconSearch = { fg = c.warning }
-	groups.NoiceMini = { fg = c.fg }
-	groups.NoicePopup = { bg = c.bg_float }
-	groups.NoicePopupBorder = { fg = c.border }
-	groups.NoiceScrollbar = { bg = c.bg_scrollbar }
-	groups.NoiceScrollbarThumb = { bg = c.bg_scrollbar_hover }
-	groups.NoiceConfirm = { bg = c.bg_float }
-	groups.NoiceLspProgressTitle = { fg = c.fg_accent }
-	groups.NoiceLspProgressClient = { fg = c.blue }
-	groups.NoiceLspProgressSpinner = { fg = c.yellow }
-end
+	if enabled("indent_blankline") then
+		groups.IblIndent = { fg = c.border }
+		groups.IblScope = { fg = c.comment }
+		groups.IblWhitespace = { fg = c.border }
+	end
 
-if enabled("trouble") then
-	groups.TroubleNormal = { fg = c.fg, bg = c.bg_sidebar }
-	groups.TroubleCount = { fg = c.purple, bold = true }
-	groups.TroubleFoldIcon = { fg = c.comment }
-	groups.TroubleText = { fg = c.fg }
-	groups.TroubleTextInformation = { fg = c.info }
-	groups.TroubleTextWarning = { fg = c.warning }
-	groups.TroubleTextError = { fg = c.error }
-	groups.TroubleSource = { fg = c.fg_accent }
-	groups.TroubleIndent = { fg = c.border }
-	groups.TroubleLocation = { fg = c.comment }
-	groups.TroublePreview = { fg = c.fg, bg = c.bg_float }
-	groups.TroubleSign = { fg = c.icon }
-	--end
+	if enabled("noice") then
+		groups.NoiceCmdline = { bg = c.bg_float }
+		groups.NoiceCmdlineIcon = { fg = c.fg_accent }
+		groups.NoiceCmdlineIconSearch = { fg = c.warning }
+		groups.NoiceMini = { fg = c.fg }
+		groups.NoicePopup = { bg = c.bg_float }
+		groups.NoicePopupBorder = { fg = c.border }
+		groups.NoiceScrollbar = { bg = c.bg_scrollbar }
+		groups.NoiceScrollbarThumb = { bg = c.bg_scrollbar_hover }
+		groups.NoiceConfirm = { bg = c.bg_float }
+		groups.NoiceLspProgressTitle = { fg = c.fg_accent }
+		groups.NoiceLspProgressClient = { fg = c.blue }
+		groups.NoiceLspProgressSpinner = { fg = c.yellow }
+	end
+
+	if enabled("trouble") then
+		groups.TroubleNormal = { fg = c.fg, bg = c.bg_sidebar }
+		groups.TroubleCount = { fg = c.purple, bold = true }
+		groups.TroubleFoldIcon = { fg = c.comment }
+		groups.TroubleText = { fg = c.fg }
+		groups.TroubleTextInformation = { fg = c.info }
+		groups.TroubleTextWarning = { fg = c.warning }
+		groups.TroubleTextError = { fg = c.error }
+		groups.TroubleSource = { fg = c.fg_accent }
+		groups.TroubleIndent = { fg = c.border }
+		groups.TroubleLocation = { fg = c.comment }
+		groups.TroublePreview = { fg = c.fg, bg = c.bg_float }
+		groups.TroubleSign = { fg = c.icon }
+	end
 
 	if enabled("gitsigns") then
 		groups.GitSignsAdd = { fg = c.created }
