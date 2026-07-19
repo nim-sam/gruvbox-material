@@ -100,7 +100,7 @@ function M.get(c, config)
 		groups.NvimTreeWinSeparator = { fg = c.border, bg = c.bg_sidebar }
 	end
 
-	groups.BufferLineOffsetSeparator = { bg = c.bg_tab_inactive, fg = c.bg_tab_inactive }
+	groups.BufferLineOffsetSeparator = { bg = "#121212", fg = "#121212" }
 
 	if enabled("bufferline") then
 		groups.BufferLineTab = { fg = c.comment, bg = c.bg_tab_inactive }
